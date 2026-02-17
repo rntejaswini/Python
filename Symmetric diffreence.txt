@@ -1,0 +1,17 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+if __name__ == '__main__':
+    # Size of first set (not strictly needed, but read as per input format)
+    m = int(input())
+    a = set(map(int, input().split()))
+    
+    # Size of second set
+    n = int(input())
+    b = set(map(int, input().split()))
+    
+    # Symmetric difference
+    sym_diff = a.symmetric_difference(b)
+    
+    # Sort and print each element
+    for num in sorted(sym_diff):
+        print(num)
