@@ -1,0 +1,20 @@
+from collections import defaultdict
+
+# Read n and m
+n, m = map(int, input().split())
+
+# Store positions of words in group A
+positions = defaultdict(list)
+
+for i in range(1, n + 1):
+    word = input()
+    positions[word].append(i)
+
+# Process group B
+for _ in range(m):
+    query = input()
+    
+    if query in positions:
+        print(" ".join(map(str, positions[query])))
+    else:
+        print(-1)
