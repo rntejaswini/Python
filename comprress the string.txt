@@ -1,0 +1,10 @@
+from itertools import groupby
+
+# Read input
+s = input().strip()
+
+# Use groupby to group consecutive identical characters
+result = [(len(list(group)), int(char)) for char, group in groupby(s)]
+
+# Print in the requested format
+print(' '.join(f'({count}, {char})' for count, char in result))
