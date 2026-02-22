@@ -1,0 +1,11 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+import calendar
+
+month, day, year = map(int, input().split())
+
+weekday_index = calendar.weekday(year, month, day)
+
+days = ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
+
+print(days[weekday_index])
