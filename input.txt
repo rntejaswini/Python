@@ -1,0 +1,11 @@
+# Read x and k
+x, k = map(int, input().split())
+
+# Read polynomial
+poly = input()
+
+# Evaluate polynomial using x
+result = eval(poly)
+
+# Print whether it equals k
+print(result == k)
