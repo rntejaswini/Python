@@ -1,0 +1,13 @@
+# Read number of students subscribed to English newspaper
+n = int(input())
+english = set(map(int, input().split()))
+
+# Read number of students subscribed to French newspaper
+m = int(input())
+french = set(map(int, input().split()))
+
+# Find symmetric difference
+result = english.symmetric_difference(french)
+
+# Print the count
+print(len(result))
