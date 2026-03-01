@@ -1,0 +1,11 @@
+def solve(s):
+    words = s.split(" ")   # keep spaces exactly as they are
+    capitalized_words = []
+
+    for word in words:
+        if word:
+            capitalized_words.append(word[0].upper() + word[1:])
+        else:
+            capitalized_words.append(word)  # preserve extra spaces
+
+    return " ".join(capitalized_words)
