@@ -1,0 +1,22 @@
+from itertools import combinations
+
+# input
+n = int(input())
+letters = input().split()
+k = int(input())
+
+# create index combinations
+indices = list(combinations(range(n), k))
+
+total = len(indices)
+count = 0
+
+# check if combination contains 'a'
+for comb in indices:
+    for i in comb:
+        if letters[i] == 'a':
+            count += 1
+            break
+
+# probability
+print(count / total)
